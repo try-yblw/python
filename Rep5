@@ -1,23 +1,23 @@
-#Задание1
+#Задание 1
 age = int(input("Введите свой возраст: "))
-if age <=18:
+if age <18:
           print("Вы несовершеннолетний")
 elif age < 65 and age > 17:
     print("Вы трудоспособный")
 elif age >= 65:
     print("Вы пенсионер")
 # Задание 2
-cost = int(input("Введите стоимость"))
+cost = int(input("Введите стоимость: "))
 if cost < 1000:
     print(cost)
 elif cost >= 1000 and cost <= 5000:
-    print(cost - (cost * 0.05))
+    print("Сумма:", cost - (cost * 0.05),"₽")
 elif cost > 5000:
-    print(cost - (cost * 0.1))
-#Задание3
-a = int(input())
-b = int(input())
-c = str(input())
+    print("Сумма:",cost - (cost * 0.1),"₽")
+#Задание 3
+a = int(input("Введи 1-е число: "))
+b = int(input("Введи 2-е число: "))
+c = str(input("Введи знак уравнения: "))
 if c == "+":
     print(a+b)
 elif c == "-":
@@ -27,8 +27,15 @@ elif c == "/":
 elif c == "*":
     print(a*b)
 #Задание 4
-num=int(input("Введите число"))
+num = int(input("Введите число: "))
 if num%10==2 or num%10==6:
     print(True)
 else:
     print(False)
+#Задание 5
+password = "1234"
+wok = input("Введи пароль: ")
+if password == wok:
+    print("Доступ разрешён")
+else:
+    print("Неверный пароль.")
