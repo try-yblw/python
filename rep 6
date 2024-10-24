@@ -1,0 +1,30 @@
+"""#Задание 1
+names = ["Richard", "Igor", "Jonathan", "Alice", "Mary", "Bonnie"]
+for x in names:
+    print(f"hello {x}!")
+
+#Task 2
+phrase = "I'm learning cycles."
+for Y in range(10):
+    print(phrase)
+
+#Task 3
+stations = ["Малиновка", "Рябиновка", "Суслово", "Дрожжино", "Звягино"]
+for t in stations:
+    print(f"train on station: {t}")
+
+#Task 4
+shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
+for m in shop:
+    if m == "Laptop":
+        print("I'm buying this.")
+        break
+    else:
+        print("I don't need it.")
+        break
+"""
+#Task 5
+tasks = ["Сдать проект (Важная)", "Сходить в магазин", "Позвонить врачу (Важная)", "Убраться в комнате", "Подготовить отчёт"]
+for i, x in enumerate(tasks, start=1):
+    if "Важная" in x: print(f"{i}!: {x} ")
+else: print(f"{i} : {x}")
