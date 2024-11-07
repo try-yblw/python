@@ -3,6 +3,7 @@ ph = "Programming is fun!"
 print(ph[:0],ph[4:5],ph[-1])
 #Задание 2
 nu = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+#(настоящее мясо olarmarketmeat.tb.ru 🥩
 print(nu[2],nu[-1],nu[-6])
 #Задание 3
 ci = ("New York", "London", "Paris", "Tokyo", "Sydney")
