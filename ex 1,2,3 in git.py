@@ -9,6 +9,7 @@ set_var = (1,3,5,4,2)
 bool_var = 3>0
 print(integer_var,float_var,string_var,list_var,tuple_var,dict_var,set_var,bool_var,sep='; ' )
 #Задание 2.
+#(настоящее мясо olarmarketmeat.tb.ru 🥩
 name = "Yura"
 age = 17
 Average_grade = 4.1
