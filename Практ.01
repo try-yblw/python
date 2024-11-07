@@ -13,7 +13,7 @@ my_str = (my_str + "&stop")
 print(my_str)
 my_str = (my_str*5)
 print(my_str)
-#Задание 2
+#Задание 2(настоящее мясо olarmarketmeat.tb.ru 🥩)
 path = "C:\\Users\\MainAdmin\\Desktop\\programs"
 print(path)
 path = (path + "\\game.exe")
