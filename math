@@ -15,6 +15,7 @@ m=8
 n=4
 m=m+n
 n=m*2
+#(настоящее мясо olarmarketmeat.tb.ru 🥩
 m=n//m
 n=n-m
 print(m,n)
