@@ -27,3 +27,28 @@ pers_1.go_back()
 pers_1.start_training() 
 pers_1.print_info() 
 pers_1.start_the_battle()  
+
+#2222222222222222222
+class Room:
+    items = []
+
+    def __init__(self, name):
+        self.name = name
+
+    def print_items(self):
+        print(f"Все предметы в комнате {self.name}: {','.join(self.items)}")
+
+    def add_items(self, *item):
+        self.items.extend(item)
+
+    def del_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+            print(f"Все предметы в команте: {','.join(self.items)}")
+        else:
+            print("Такого предмета нет в комнате")
+
+room_1 = Room("Кухня")
+room_1.add_items("Холодильник", "Стул", "Стол")
+room_1.print_items()
+room_1.del_item("Стул")
