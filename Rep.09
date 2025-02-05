@@ -30,25 +30,72 @@ pers_1.start_the_battle()
 
 #2222222222222222222
 class Room:
-    items = []
-
+    item =[]
+    room_locked = False
     def __init__(self, name):
         self.name = name
-
-    def print_items(self):
-        print(f"Все предметы в комнате {self.name}: {','.join(self.items)}")
-
-    def add_items(self, *item):
-        self.items.extend(item)
-
+    def print_item(self):
+        print(f"Все предметы в комнате {self.name}: {', '.join(self.item)}")
+    def add_item(self, *args):
+        self.item.extend(args)
     def del_item(self, item):
-        if item in self.items:
-            self.items.remove(item)
-            print(f"Все предметы в команте: {','.join(self.items)}")
+        if item in self.item:
+            self.item.remove(item)
+            print(f"Все предметы в комнате: {', '.join(self.item)}")
         else:
-            print("Такого предмета нет в комнате")
+            print("Такого предмета в комнате нету.")
+    def is_empty(self, old_item, new_item):
+        if old_item in self.item:
+            index = self.item.index(old_item)
+            self.item[index] = new_item
+            print(f"Предмет '{old_item}' заменен на '{new_item}'.")
+        else:
+            print(f"Предмет '{old_item}' не найден в комнате.")
+    def lock_room(self):
+        self.locked_room = True
+        print(f"Комната {self.name} заблокирована")
 
-room_1 = Room("Кухня")
-room_1.add_items("Холодильник", "Стул", "Стол")
-room_1.print_items()
-room_1.del_item("Стул")
+    def unlock_room(self):
+        self.is_locked_status = False
+        print(f"Комната {self.name} разблокирована.")
+
+    def is_locked(self):
+        if self.is_locked_status:
+            print(f"Комната {self.name} заблокирована.")
+        else:
+            print(f"Комната {self.name} разблокирована.")
+        return self.is_locked_status
+
+room1 = Room("Кухня")
+room1.add_item("Холодильник","Стул", "Стол")
+room1.print_item()
+room1.del_item("Стул")
+room1.is_empty("Стол", "Тумбочка")
+room1.print_item()
+room1.lock_room()
+room1.unlock_room()
+room1.is_locked()
+#3333333333333333333333333333333
+class stud:
+    def __init__(self, name, kurs, sr_bal):
+        self.name = name
+        self.kurs = kurs
+        self.sr_bal = sr_bal
+
+    def pokaz_info(self, inf):
+        print(f"Студент по имени {self.name}, {self.kurs} курс со средним балом: {self.sr_bal}")
+
+    def adkurs(self, num=1):
+        self.kurs += num
+
+    def izm_sr_bal(self, o_bal, n_bal):
+        if o_bal in self.sr_bal:
+            index = self.sr_bal.index(o_bal)
+            self.sr_bal[index] = n_bal
+            print(f"Предмет '{o_bal}' заменен на '{n_bal}'.")
+        else:
+            print(f"Предмет '{o_bal}' не найден в комнате.")
+
+stud1 = stud("Петя", 2,3.56)
+stud1.pokaz_info()
+
