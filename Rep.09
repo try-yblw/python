@@ -99,3 +99,34 @@ class stud:
 stud1 = stud("Петя", 2,3.56)
 stud1.pokaz_info()
 
+
+
+
+class stud:
+    def __init__(self, name, kurs, sr_bal,  self.ochenka,n_bal)
+            self.n_bal = n_bal):
+        self.name = name
+        self.kurs = kurs
+        self.sr_bal = sr_bal
+        self.ochenka = ochenka
+        self.n_bal = n_bal
+
+    def pokaz_info(self):
+        print(f"Студент по имени {self.name} {self.kurs} курса со средним балом: {self.sr_bal}")
+
+    def adkurs(self, num=1):
+        self.kurs += num
+
+    def izm_sr_bal(self, o_bal, ochenka, n_bal, num=1):
+        if o_bal < 5:
+            self.ochenka = ochenka
+            self.n_bal = n_bal
+            self.sr_bal = (n_bal + o_bal)/2
+            print(f"Средний бал '{o_bal}' стал '{n_bal}'.")
+        else:
+            print(f"Куда выше то?")
+
+stud1 = stud("Петя", 2, 3)
+stud1.pokaz_info()
+stud1.ochenka(3)
+
