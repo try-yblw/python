@@ -1,0 +1,24 @@
+import os
+import subprocess
+
+class GameLauncher:
+    def __init__(self, game_name, game_folder, executable_name):
+        self.game_name = game_name
+        self.game_folder = game_folder
+        self.executable = os.path.join(self.game_folder, executable_name)
+
+    def launch_game(self):
+        if self.game_installed:
+             print(f"Игра {self.game_name} успешно запущена с пути: {self.executable_path}")
+        else:
+            print(f"Ошибка: Игра {self.game_name} не запущена. Путь {self.executable_path} не найден.")
+
+
+if __name__ == "__main__":
+    minecraft = GameLauncher("Minecraft", "C:\\Game\\Minecraft", "MinecraftLauncher.exe")
+    gta5 = GameLauncher("GTA V", "D:\\Game\\GTAV", "GTAV.exe")
+    genshin = GameLauncher("Genshin Impact", "C:\\Game\\GenshinImpact", "GenshinImpact.exe")
+
+    minecraft.launch_game()
+    gta5.launch_game()
+    genshin.launch_game()
